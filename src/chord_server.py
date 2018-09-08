@@ -5,7 +5,7 @@ import socket
 import sys
 
 sys.path.append('gen-py')
-sys.path.insert(0, glob.glob('/home/yaoliu/src_code/local/lib/lib/python2.7/site-packages')[0])
+sys.path.insert(0, glob.glob('/home/src_code/lib/python2.7/site-packages')[0]) # path where thrift is installed
 
 from chord import FileStore
 from chord.ttypes import NodeID, RFile, RFileMetadata, SystemException
