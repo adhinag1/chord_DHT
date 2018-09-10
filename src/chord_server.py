@@ -144,10 +144,10 @@ class FileStoreHandler:
             raise system_exception("Fingertable not exist for the current node")
 
         self.curr_node = getCurrentNode()
-
+        """
         if self.getNodeSucc().id == self.curr_node.id:
             return self.curr_node
-
+        """
         if belongs_to(key, self.curr_node.id, self.getNodeSucc().id):
             return self.curr_node
 
