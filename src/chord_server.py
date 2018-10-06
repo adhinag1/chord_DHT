@@ -144,13 +144,14 @@ class FileStoreHandler:
             raise system_exception("Fingertable not exist for the current node")
 
         self.curr_node = getCurrentNode()
-        """
+        
         if self.getNodeSucc().id == self.curr_node.id:
             return self.curr_node
         """
         if belongs_to(key, self.curr_node.id, self.getNodeSucc().id):
             return self.curr_node
-
+        """
+        
         if not belongs_to(key, self.curr_node.id, self.getNodeSucc().id):
             curr_node = self.closest_preceding_finger(key)
             logger.info("Next successor is at ip %s on port %s " % (curr_node.ip, curr_node.port))
